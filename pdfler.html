@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sana Özel ❤️</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            padding: 35px 20px 60px;
+
+            font-family: Arial, sans-serif;
+            text-align: center;
+
+            background: linear-gradient(
+                135deg,
+                #ff1744,
+                #ff4081,
+                #e040fb,
+                #ff6f91
+            );
+
+            background-size: 400% 400%;
+
+            animation:
+                arkaPlan 10s ease infinite;
+
+            overflow-x: hidden;
+        }
+
+
+        /* HAREKETLİ ARKA PLAN */
+
+        @keyframes arkaPlan {
+
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        /* ANA BAŞLIK */
+
+        h1 {
+            color: white;
+
+            font-size: 40px;
+
+            margin-bottom: 45px;
+
+            text-shadow:
+                0 3px 12px rgba(0,0,0,0.45);
+
+            position: relative;
+
+            z-index: 20;
+        }
+
+
+        /* KİTAP VE ŞİİR BÖLÜMÜ
+           ARTIK BEYAZ KUTU YOK */
+
+        .bolum {
+            max-width: 600px;
+
+            margin: 60px auto;
+
+            position: relative;
+
+            z-index: 20;
+        }
+
+
+        /* KİTABIM / ŞİİRİM */
+
+        h2 {
+            color: white;
+
+            font-size: 32px;
+
+            margin-bottom: 12px;
+
+            text-shadow:
+                0 3px 10px rgba(0,0,0,0.55);
+        }
+
+
+        /* ESER ADI */
+
+        .eserAdi {
+            color: white;
+
+            font-size: 19px;
+            font-weight: bold;
+
+            margin-bottom: 55px;
+
+            text-shadow:
+                0 3px 9px rgba(0,0,0,0.55);
+        }
+
+
+        /* KALP BUTONUNUN ALANI */
+
+        .kalpAlani {
+            height: 150px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        /* KALP BUTONU */
+
+        .kalpButon {
+            position: relative;
+
+            width: 110px;
+            height: 110px;
+
+            background: #ff1744;
+
+            transform: rotate(-45deg);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 8px 30px rgba(0,0,0,0.3);
+
+            animation:
+                kalpAtisi 1.15s infinite;
+        }
+
+
+        /* KALBİN YUVARLAK KISIMLARI */
+
+        .kalpButon::before,
+        .kalpButon::after {
+            content: "";
+
+            position: absolute;
+
+            width: 110px;
+            height: 110px;
+
+            background: #ff1744;
+
+            border-radius: 50%;
+        }
+
+
+        .kalpButon::before {
+            top: -55px;
+            left: 0;
+        }
+
+
+        .kalpButon::after {
+            left: 55px;
+            top: 0;
+        }
+
+
+        /* KALBİN İÇİNDEKİ YAZI */
+
+        .kalpYazi {
+            position: relative;
+
+            z-index: 10;
+
+            transform: rotate(45deg);
+
+            width: 100px;
+
+            color: white;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            line-height: 19px;
+
+            text-align: center;
+
+            pointer-events: none;
+
+            text-shadow:
+                0 2px 5px rgba(0,0,0,0.35);
+        }
+
+
+        /* KALP ATIŞI */
+
+        @keyframes kalpAtisi {
+
+            0% {
+                transform:
+                    rotate(-45deg)
+                    scale(1);
+            }
+
+            12% {
+                transform:
+                    rotate(-45deg)
+                    scale(1.16);
+            }
+
+            24% {
+                transform:
+                    rotate(-45deg)
+                    scale(1);
+            }
+
+            36% {
+                transform:
+                    rotate(-45deg)
+                    scale(1.10);
+            }
+
+            48% {
+                transform:
+                    rotate(-45deg)
+                    scale(1);
+            }
+
+            100% {
+                transform:
+                    rotate(-45deg)
+                    scale(1);
+            }
+        }
+
+
+        .kalpButon:hover {
+            animation-duration: 0.65s;
+        }
+
+
+        /* UÇAN KALPLER */
+
+        .kalp {
+            position: fixed;
+
+            bottom: -70px;
+
+            pointer-events: none;
+
+            z-index: 5;
+
+            animation:
+                yukari 6s linear forwards;
+        }
+
+
+        /* UÇAN YAZILAR */
+
+        .sevgiYazisi {
+            position: fixed;
+
+            bottom: -80px;
+
+            color: white;
+
+            font-size: 23px;
+            font-weight: bold;
+
+            white-space: nowrap;
+
+            pointer-events: none;
+
+            z-index: 8;
+
+            text-shadow:
+                0 3px 9px rgba(0,0,0,0.5);
+
+            animation:
+                yukari 8s linear forwards;
+        }
+
+
+        /* FARSI YAZILAR */
+
+        .farsca {
+            direction: rtl;
+
+            font-size: 27px;
+
+            font-weight: bold;
+        }
+
+
+        @keyframes yukari {
+
+            from {
+                transform:
+                    translateY(0);
+
+                opacity: 1;
+            }
+
+            to {
+                transform:
+                    translateY(-115vh);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* TELEFON */
+
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            .eserAdi {
+                font-size: 16px;
+            }
+
+            .kalpButon {
+                width: 90px;
+                height: 90px;
+            }
+
+            .kalpButon::before,
+            .kalpButon::after {
+                width: 90px;
+                height: 90px;
+            }
+
+            .kalpButon::before {
+                top: -45px;
+            }
+
+            .kalpButon::after {
+                left: 45px;
+            }
+
+            .kalpYazi {
+                width: 80px;
+                font-size: 12px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <h1>
+        ❤️ Sana Özel ❤️
+    </h1>
+
+
+
+    <!-- KİTAP -->
+
+    <div class="bolum">
+
+        <h2>
+            📚 Kitabım
+        </h2>
+
+
+        <div class="eserAdi">
+
+            KİMSE BENİ GÖRMEDİ DUYMADI
+
+        </div>
+
+
+        <div class="kalpAlani">
+
+            <a
+                class="kalpButon"
+                href="kitap.pdf"
+                target="_blank">
+
+                <span class="kalpYazi">
+
+                    📖
+                    <br>
+                    Kitabı Aç
+
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ŞİİR -->
+
+    <div class="bolum">
+
+        <h2>
+            Şiirim
+        </h2>
+
+
+        <div class="eserAdi">
+
+            KİMSE BENİ GÖRMEDİ DUYMADI ŞİİR
+
+        </div>
+
+
+        <div class="kalpAlani">
+
+            <a
+                class="kalpButon"
+                href="siir.pdf"
+                target="_blank">
+
+                <span class="kalpYazi">
+
+                    ❤️
+                    <br>
+                    Şiiri Aç
+
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+
+        /* KALP OLUŞTUR */
+
+        function kalpOlustur() {
+
+            const kalp =
+                document.createElement("div");
+
+
+            kalp.className = "kalp";
+
+
+            const kalpler = [
+
+                "❤️",
+                "💖",
+                "💕",
+                "💗",
+                "💘",
+                "💞"
+
+            ];
+
+
+            kalp.innerHTML =
+
+                kalpler[
+                    Math.floor(
+                        Math.random()
+                        * kalpler.length
+                    )
+                ];
+
+
+            kalp.style.left =
+                Math.random() * 100 + "vw";
+
+
+            kalp.style.fontSize =
+                (22 + Math.random() * 38)
+                + "px";
+
+
+            kalp.style.animationDuration =
+                (4 + Math.random() * 3)
+                + "s";
+
+
+            document.body.appendChild(kalp);
+
+
+            setTimeout(function() {
+
+                kalp.remove();
+
+            }, 7000);
+
+        }
+
+
+
+        /* YAZI OLUŞTUR */
+
+        function yaziOlustur(ozelYazi = null) {
+
+            const yazi =
+                document.createElement("div");
+
+
+            yazi.className =
+                "sevgiYazisi";
+
+
+            const yazilar = [
+
+                "عزیزم ❤️",
+
+                "دوستت دارم ❤️",
+
+                "Seni Seviyorum ❤️",
+
+                "İyi ki Varsın 💕",
+
+                "İyi ki Biz ❤️",
+
+                "Sadece Sen 💖",
+
+                "Hep Sen ❤️"
+
+            ];
+
+
+            if (ozelYazi !== null) {
+
+                yazi.innerHTML =
+                    ozelYazi;
+
+            }
+
+            else {
+
+                yazi.innerHTML =
+
+                    yazilar[
+                        Math.floor(
+                            Math.random()
+                            * yazilar.length
+                        )
+                    ];
+
+            }
+
+
+            /* FARSI YAZIYSA */
+
+            if (
+                yazi.innerHTML.includes("عزیزم") ||
+                yazi.innerHTML.includes("دوستت")
+            ) {
+
+                yazi.classList.add("farsca");
+
+            }
+
+
+            yazi.style.left =
+                (5 + Math.random() * 70)
+                + "vw";
+
+
+            document.body.appendChild(yazi);
+
+
+            setTimeout(function() {
+
+                yazi.remove();
+
+            }, 9000);
+
+        }
+
+
+
+        /* SAYFA AÇILINCA
+           İLK OLARAK FARSI YAZILAR */
+
+        setTimeout(function() {
+
+            yaziOlustur("عزیزم ❤️");
+
+        }, 300);
+
+
+        setTimeout(function() {
+
+            yaziOlustur("دوستت دارم ❤️");
+
+        }, 1100);
+
+
+
+        /* İLK ANDA KALPLER */
+
+        for (
+            let i = 0;
+            i < 25;
+            i++
+        ) {
+
+            setTimeout(
+
+                kalpOlustur,
+
+                i * 120
+
+            );
+
+        }
+
+
+
+        /* KALPLER SÜREKLİ */
+
+        setInterval(
+
+            kalpOlustur,
+
+            500
+
+        );
+
+
+
+        /* SONRA DİĞER YAZILAR */
+
+        setInterval(
+
+            yaziOlustur,
+
+            2400
+
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
