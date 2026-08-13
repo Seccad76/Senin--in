@@ -30,20 +30,31 @@
 
             background-size: 400% 400%;
             animation: arkaPlan 10s ease infinite;
+
             overflow-x: hidden;
         }
 
         @keyframes arkaPlan {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         h1 {
             color: white;
             font-size: 40px;
             margin-bottom: 50px;
-            text-shadow: 0 3px 12px rgba(0,0,0,0.45);
+
+            text-shadow:
+                0 3px 12px rgba(0,0,0,0.45);
 
             position: relative;
             z-index: 20;
@@ -62,16 +73,19 @@
             font-size: 32px;
             margin-bottom: 15px;
 
-            text-shadow: 0 3px 10px rgba(0,0,0,0.55);
+            text-shadow:
+                0 3px 10px rgba(0,0,0,0.55);
         }
 
         .eserAdi {
             color: white;
             font-size: 19px;
             font-weight: bold;
+
             margin-bottom: 60px;
 
-            text-shadow: 0 3px 9px rgba(0,0,0,0.55);
+            text-shadow:
+                0 3px 9px rgba(0,0,0,0.55);
         }
 
         .kalpAlani {
@@ -81,6 +95,8 @@
             justify-content: center;
             align-items: center;
         }
+
+        /* KALP BUTONU */
 
         .kalpButon {
             position: relative;
@@ -98,9 +114,11 @@
 
             text-decoration: none;
 
-            box-shadow: 0 8px 30px rgba(0,0,0,0.30);
+            box-shadow:
+                0 8px 30px rgba(0,0,0,0.30);
 
-            animation: kalpAtisi 1.15s infinite;
+            animation:
+                kalpAtisi 1.15s infinite;
 
             cursor: pointer;
         }
@@ -115,6 +133,7 @@
             height: 110px;
 
             background: #ff1744;
+
             border-radius: 50%;
         }
 
@@ -130,6 +149,7 @@
 
         .kalpYazi {
             position: relative;
+
             z-index: 10;
 
             transform: rotate(45deg);
@@ -147,44 +167,66 @@
             pointer-events: none;
         }
 
+        /* KALP ATIŞI */
+
         @keyframes kalpAtisi {
             0% {
-                transform: rotate(-45deg) scale(1);
+                transform:
+                    rotate(-45deg)
+                    scale(1);
             }
 
             12% {
-                transform: rotate(-45deg) scale(1.16);
+                transform:
+                    rotate(-45deg)
+                    scale(1.16);
             }
 
             24% {
-                transform: rotate(-45deg) scale(1);
+                transform:
+                    rotate(-45deg)
+                    scale(1);
             }
 
             36% {
-                transform: rotate(-45deg) scale(1.10);
+                transform:
+                    rotate(-45deg)
+                    scale(1.10);
             }
 
             48% {
-                transform: rotate(-45deg) scale(1);
+                transform:
+                    rotate(-45deg)
+                    scale(1);
             }
 
             100% {
-                transform: rotate(-45deg) scale(1);
+                transform:
+                    rotate(-45deg)
+                    scale(1);
             }
         }
 
+        /* UÇAN KALPLER */
+
         .kalp {
             position: fixed;
+
             bottom: -70px;
 
             pointer-events: none;
+
             z-index: 5;
 
-            animation: yukari 6s linear forwards;
+            animation:
+                yukari 6s linear forwards;
         }
+
+        /* UÇAN YAZILAR */
 
         .sevgiYazisi {
             position: fixed;
+
             bottom: -80px;
 
             color: white;
@@ -193,13 +235,16 @@
             font-weight: bold;
 
             white-space: nowrap;
+
             pointer-events: none;
 
             z-index: 8;
 
-            text-shadow: 0 3px 9px rgba(0,0,0,0.5);
+            text-shadow:
+                0 3px 9px rgba(0,0,0,0.5);
 
-            animation: yukari 8s linear forwards;
+            animation:
+                yukari 8s linear forwards;
         }
 
         @keyframes yukari {
@@ -215,6 +260,7 @@
         }
 
         @media (max-width: 600px) {
+
             h1 {
                 font-size: 31px;
             }
@@ -245,21 +291,31 @@
             .kalpButon::after {
                 left: 45px;
             }
+
+            .kalpYazi {
+                width: 80px;
+                font-size: 12px;
+            }
         }
+
     </style>
 </head>
 
 
 <body>
 
-    <h1>❤️ Sana Özel ❤️</h1>
+    <h1>
+        ❤️ Sana Özel ❤️
+    </h1>
 
 
     <!-- KİTAP -->
 
     <div class="bolum">
 
-        <h2>📚 Kitabım</h2>
+        <h2>
+            📚 Kitabım
+        </h2>
 
         <div class="eserAdi">
             KİMSE BENİ GÖRMEDİ DUYMADI
@@ -269,11 +325,12 @@
 
             <a
                 class="kalpButon"
-                href="./KİMSE BENİ GÖRMEDİ DUYMADI.pdf"
+                href="KİMSE BENİ GÖRMEDİ DUYMADI.pdf"
                 target="_blank">
 
                 <span class="kalpYazi">
-                    📖<br>
+                    📖
+                    <br>
                     Kitabı Aç
                 </span>
 
@@ -288,7 +345,9 @@
 
     <div class="bolum">
 
-        <h2>Şiirim</h2>
+        <h2>
+            Şiirim
+        </h2>
 
         <div class="eserAdi">
             KİMSE BENİ GÖRMEDİ DUYMADI ŞİİR
@@ -298,11 +357,12 @@
 
             <a
                 class="kalpButon"
-                href="./KİMSE BENİ GÖRMEDİ DUYMADI ŞİİR.pdf"
+                href="KİMSE BENİ GÖRMEDİ DUYMADI ŞİİR.pdf"
                 target="_blank">
 
                 <span class="kalpYazi">
-                    ❤️<br>
+                    ❤️
+                    <br>
                     Şiiri Aç
                 </span>
 
@@ -317,7 +377,8 @@
 
         function kalpOlustur() {
 
-            const kalp = document.createElement("div");
+            const kalp =
+                document.createElement("div");
 
             kalp.className = "kalp";
 
@@ -333,7 +394,8 @@
             kalp.innerHTML =
                 kalpler[
                     Math.floor(
-                        Math.random() * kalpler.length
+                        Math.random() *
+                        kalpler.length
                     )
                 ];
 
@@ -341,10 +403,12 @@
                 Math.random() * 100 + "vw";
 
             kalp.style.fontSize =
-                (22 + Math.random() * 38) + "px";
+                (22 + Math.random() * 38)
+                + "px";
 
             kalp.style.animationDuration =
-                (4 + Math.random() * 3) + "s";
+                (4 + Math.random() * 3)
+                + "s";
 
             document.body.appendChild(kalp);
 
@@ -354,7 +418,7 @@
         }
 
 
-        function yaziOlustur() {
+        function yaziOlustur(ozelYazi = null) {
 
             const yazi =
                 document.createElement("div");
@@ -363,34 +427,81 @@
                 "sevgiYazisi";
 
             const yazilar = [
+
                 "عزیزم ❤️",
+
                 "دوستت دارم ❤️",
+
                 "Seni Seviyorum ❤️",
+
                 "İyi ki Varsın 💕",
+
                 "İyi ki Biz ❤️",
+
                 "Sadece Sen 💖",
+
                 "Hep Sen ❤️"
+
             ];
 
-            yazi.innerHTML =
-                yazilar[
-                    Math.floor(
-                        Math.random() * yazilar.length
-                    )
-                ];
+
+            if (ozelYazi !== null) {
+
+                yazi.innerHTML =
+                    ozelYazi;
+
+            } else {
+
+                yazi.innerHTML =
+                    yazilar[
+                        Math.floor(
+                            Math.random() *
+                            yazilar.length
+                        )
+                    ];
+            }
+
 
             yazi.style.left =
-                (5 + Math.random() * 70) + "vw";
+                (5 + Math.random() * 70)
+                + "vw";
+
 
             document.body.appendChild(yazi);
 
+
             setTimeout(function() {
+
                 yazi.remove();
+
             }, 9000);
         }
 
 
+        /* İLK FARSI YAZILAR */
+
+        setTimeout(function() {
+
+            yaziOlustur(
+                "عزیزم ❤️"
+            );
+
+        }, 300);
+
+
+        setTimeout(function() {
+
+            yaziOlustur(
+                "دوستت دارم ❤️"
+            );
+
+        }, 1100);
+
+
+        /* İLK ANDA KALPLER */
+
         for (let i = 0; i < 25; i++) {
+
             setTimeout(
                 kalpOlustur,
                 i * 120
@@ -398,11 +509,15 @@
         }
 
 
+        /* KALPLER SÜREKLİ */
+
         setInterval(
             kalpOlustur,
             500
         );
 
+
+        /* YAZILAR SÜREKLİ */
 
         setInterval(
             yaziOlustur,
